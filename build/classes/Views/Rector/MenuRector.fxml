@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Views.Rector.MenuRectorController">
+   <center>
+      <AnchorPane style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <children>
+            <Text layoutX="102.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rector" wrappingWidth="135.6015625" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="35.0">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="45.0" fitWidth="60.0" layoutX="45.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="45.0" AnchorPane.topAnchor="35.0">
+               <image>
+                  <Image url="@../../Imagenes/Rector/rector.png" />
+               </image>
+            </ImageView>
+            <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" ellipsisString="" focusTraversable="false" layoutX="800.0" layoutY="35.0" onAction="#cerrarSesion" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: WHITE;" AnchorPane.rightAnchor="44.0" AnchorPane.topAnchor="35.0">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Imagenes/Campos/login.png" />
+                     </image>
+                  </ImageView>
+               </graphic></JFXButton>
+            <FlowPane hgap="60.0" layoutX="75.0" layoutY="188.0" prefHeight="377.0" prefWidth="900.0" vgap="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <JFXButton fx:id="btn_usuarios" alignment="CENTER" buttonType="RAISED" contentDisplay="TOP" focusTraversable="false" graphicTextGap="7.0" onAction="#abrirUsuarios" onMouseEntered="#cambiarColorUsuarios" onMouseExited="#btonUsuario" prefHeight="140.0" prefWidth="120.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="Usuarios" textOverrun="CLIP">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="img_usuarios" fitHeight="70.0" fitWidth="70.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" smooth="false">
+                           <image>
+                              <Image url="@../../Imagenes/Campos/cuenta.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btn_matriculas" alignment="CENTER" buttonType="RAISED" contentDisplay="TOP" focusTraversable="false" graphicTextGap="30.0" onAction="#abrirMatriculas" onMouseEntered="#cambiarColorMatriculas" onMouseExited="#btonMatriculas" prefHeight="140.0" prefWidth="120.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="Matriculas" textOverrun="CLIP">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="img_matriculas" fitHeight="60.0" fitWidth="60.0" nodeOrientation="INHERIT" onDragDetected="#abrirMatriculas" pickOnBounds="true" preserveRatio="true" smooth="false">
+                           <image>
+                              <Image url="@../../Imagenes/Guarderia/matricula.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btn_docentes" alignment="CENTER" buttonType="RAISED" contentDisplay="TOP" focusTraversable="false" graphicTextGap="20.0" onAction="#abrirDocentes" onMouseEntered="#cambiarColorDocentes" onMouseExited="#btonDocente" prefHeight="140.0" prefWidth="120.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="Docentes" textOverrun="CLIP">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="img_docente" fitHeight="60.0" fitWidth="60.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" smooth="false">
+                           <image>
+                              <Image url="@../../Imagenes/Guarderia/docente.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btn_persona" alignment="CENTER" buttonType="RAISED" contentDisplay="TOP" focusTraversable="false" graphicTextGap="20.0" onAction="#abrirPersonasReponsable" onMouseEntered="#cambiarColorPersona" onMouseExited="#btonPersona" prefHeight="140.0" prefWidth="120.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="Persona Resposable" textOverrun="CLIP">
+                     <graphic>
+                        <ImageView fx:id="img_persona" fitHeight="70.0" fitWidth="70.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" smooth="false">
+                           <image>
+                              <Image url="@../../Imagenes/Guarderia/persona.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btn_notas" alignment="CENTER" buttonType="RAISED" contentDisplay="TOP" focusTraversable="false" graphicTextGap="20.0" onAction="#abrirNotas" onMouseEntered="#cambiarColorNotas" onMouseExited="#btonNotas" prefHeight="140.0" prefWidth="120.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="Notas" textOverrun="CLIP">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="img_notas" fitHeight="60.0" fitWidth="60.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" smooth="false">
+                           <image>
+                              <Image url="@../../Imagenes/Guarderia/nota.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btn_reporte" alignment="CENTER" buttonType="RAISED" contentDisplay="TOP" focusTraversable="false" graphicTextGap="20.0" onAction="#abrirReportes" onMouseEntered="#cambiarColorReporte" onMouseExited="#btonReporte" prefHeight="140.0" prefWidth="120.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="Reporte" textOverrun="CLIP">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="img_reporte" fitHeight="60.0" fitWidth="60.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" smooth="false">
+                           <image>
+                              <Image url="@../../Imagenes/Guarderia/reporte.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="200.0" right="100.0" top="40.0" />
+               </padding>
+            </FlowPane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

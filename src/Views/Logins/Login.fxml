@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Views.Logins.LoginController">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton buttonType="RAISED" layoutX="218.0" layoutY="330.0" onAction="#login" prefHeight="33.0" prefWidth="150.0" style="-fx-background-color: blue;" text="Continuar" textFill="WHITE" />
+            <JFXTextField fx:id="campo_correo" alignment="CENTER" layoutX="218.0" layoutY="175.0" prefHeight="25.0" prefWidth="150.0" promptText="Correo" />
+            <Text layoutX="218.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Iniciar Sesion">
+               <font>
+                  <Font name="Calibri" size="30.0" />
+               </font>
+            </Text>
+            <JFXCheckBox fx:id="mostrarContra" checkedColor="#1655c9" layoutX="222.0" layoutY="257.0" onAction="#mostrarContra" prefHeight="26.0" prefWidth="151.0" text="Mostrar Constraseña">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </JFXCheckBox>
+            <JFXPasswordField fx:id="campo_contra" alignment="CENTER" layoutX="218.0" layoutY="219.0" prefHeight="25.0" prefWidth="150.0" promptText="Contraseña" />
+            <JFXTextField fx:id="text_contra" alignment="CENTER" layoutX="218.0" layoutY="219.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="150.0" promptText="Contraseña" />
+            <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="218.0" layoutY="220.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Imagenes/Campos/lock.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="218.0" layoutY="176.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Imagenes/Campos/email.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+   </center>
+</BorderPane>

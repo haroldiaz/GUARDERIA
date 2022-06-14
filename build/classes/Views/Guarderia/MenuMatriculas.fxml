@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Views.Guarderia.MenuMatriculasController">
+   <bottom>
+      <AnchorPane prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="tabla" editable="true" layoutX="5.0" layoutY="136.0" onMouseClicked="#ver" prefHeight="564.0" prefWidth="776.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
+               <columns>
+                  <TableColumn fx:id="numeroMatricula" minWidth="0.0" prefWidth="70.0" text="Matricula" />
+                  <TableColumn fx:id="nombres" minWidth="0.0" prefWidth="70.0" text="Nombre" />
+                  <TableColumn fx:id="apellido" minWidth="0.0" prefWidth="104.0" text="Apellidos" />
+                  <TableColumn fx:id="numeroRegistro" prefWidth="158.0" text="Numero Registro Civil" />
+                  <TableColumn fx:id="tipoSangre" prefWidth="113.0" text="Tipo Sangre" />
+                  <TableColumn fx:id="tipoSexo" prefWidth="113.0" text="Sexo" />
+                  <TableColumn fx:id="fechaNacimiento" prefWidth="117.0" text="Fecha Nacimiento" />
+                  <TableColumn fx:id="fechaIngreso" prefWidth="153.0" text="Fecha Ingreso Guarderia" />
+                  <TableColumn fx:id="grado" minWidth="0.0" prefWidth="75.66668701171875" text="Grado" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+               
+            </TableView>
+            <Text layoutX="42.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registro Matricula">
+               <font>
+                  <Font size="41.0" />
+               </font>
+            </Text>
+            <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="10.0" layoutX="800.0" layoutY="543.0" onAction="#INSERT" prefHeight="30.0" prefWidth="160.0" style="-fx-background-color: green;" text="Agregar Matricula" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Imagenes/Campos/plus-circle.png" />
+                     </image>
+                  </ImageView>
+               </graphic></JFXButton>
+            <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="10.0" layoutX="801.0" layoutY="587.0" onAction="#UPDATE" prefHeight="30.0" prefWidth="160.0" style="-fx-background-color: yellow;" text="Actualizar Matricula">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Imagenes/Campos/refresh-circle.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="11.0" />
+               </font></JFXButton>
+            <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" ellipsisString="" layoutX="801.0" layoutY="629.0" onAction="#DELETE" prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: red;" text="." textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Imagenes/Campos/delete.png" />
+                     </image>
+                  </ImageView>
+               </graphic></JFXButton>
+            <JFXTextField fx:id="campo_numeroMatricula" layoutX="798.0" layoutY="164.0" prefHeight="25.0" prefWidth="160.0" promptText="Numero Matricula" />
+            <JFXTextField fx:id="campo_nombre" layoutX="798.0" layoutY="204.0" prefHeight="25.0" prefWidth="160.0" promptText="Nombre" />
+            <JFXTextField fx:id="campo_apellido" layoutX="798.0" layoutY="243.0" prefHeight="25.0" prefWidth="160.0" promptText="Apellido" />
+            <JFXTextField fx:id="campo_registroCivil" layoutX="798.0" layoutY="283.0" prefHeight="25.0" prefWidth="160.0" promptText="Numero Registro Civil" />
+            <JFXDatePicker fx:id="campo_fechaNacimiento" layoutX="798.0" layoutY="405.0" promptText="Fecha Nacimiento" />
+            <JFXDatePicker fx:id="campo_ingresoGuarderia" layoutX="798.0" layoutY="446.0" promptText="Fecha Ingreso Guarderia" />
+            <JFXComboBox fx:id="campo_grado" layoutX="797.0" layoutY="486.0" prefHeight="25.0" prefWidth="160.0" promptText="Grado" />
+            <JFXComboBox fx:id="campo_sexo" layoutX="800.0" layoutY="365.0" prefHeight="25.0" prefWidth="160.0" promptText="Sexo" />
+            <JFXComboBox fx:id="campo_tipoSangre" layoutX="800.0" layoutY="324.0" prefHeight="25.0" prefWidth="160.0" promptText="Tipo de Sangre" />
+            <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" ellipsisString="" layoutX="914.0" layoutY="629.0" onAction="#limpiar" prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: WHITE;" text=".">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Imagenes/Campos/close-circle.png" />
+                     </image>
+                  </ImageView>
+               </graphic></JFXButton>
+            <Text layoutX="796.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Matricula">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="campo_documento" layoutX="1001.0" layoutY="164.0" prefHeight="25.0" prefWidth="160.0" promptText="Documento" />
+            <Text layoutX="999.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Persona Responsable">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="campo_nombrepadre" layoutX="1003.0" layoutY="206.0" prefHeight="25.0" prefWidth="160.0" promptText="Nombre" />
+            <JFXTextField fx:id="campo_direccion" layoutX="1002.0" layoutY="245.0" prefHeight="25.0" prefWidth="160.0" promptText="Direccion" />
+            <JFXTextField fx:id="campo_telefono" layoutX="1003.0" layoutY="285.0" prefHeight="25.0" prefWidth="160.0" promptText="Numero Telefono" />
+            <JFXTextField fx:id="campo_parentesco" layoutX="1002.0" layoutY="326.0" prefHeight="25.0" prefWidth="160.0" promptText="Parentesco" />
+            <Text layoutX="1001.0" layoutY="396.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuario">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="campo_correo" layoutX="1002.0" layoutY="409.0" prefHeight="25.0" prefWidth="160.0" promptText="Correo" />
+            <JFXTextField fx:id="campo_contra" layoutX="1003.0" layoutY="448.0" prefHeight="25.0" prefWidth="160.0" promptText="Contraseña" />
+            <JFXDatePicker fx:id="campo_ingreso" layoutX="1004.0" layoutY="489.0" prefHeight="25.0" prefWidth="162.0" promptText="Fecha Ingreso" />
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>

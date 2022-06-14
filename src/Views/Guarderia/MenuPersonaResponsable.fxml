@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Views.Guarderia.MenuPersonaResponsableController">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <children>
+            <Text layoutX="28.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Persona Responsable" wrappingWidth="256.330078125">
+               <font>
+                  <Font size="25.0" />
+               </font></Text>
+            <TableView fx:id="tabla" layoutX="11.0" layoutY="165.0" onMouseClicked="#ver" prefHeight="429.0" prefWidth="638.0" AnchorPane.leftAnchor="11.0">
+              <columns>
+                <TableColumn fx:id="matricula" prefWidth="75.0" text="Matricula" />
+                  <TableColumn fx:id="documento" prefWidth="75.0" text="Documento" />
+                <TableColumn fx:id="nombre" prefWidth="75.0" text="Nombre" />
+                  <TableColumn fx:id="direccion" prefWidth="75.0" text="Direccion" />
+                  <TableColumn fx:id="telefono" prefWidth="75.0" text="telefono" />
+                  <TableColumn fx:id="parentesco" prefWidth="75.0" text="parentesco" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <JFXTextField fx:id="campo_nombres" layoutX="688.0" layoutY="242.0" prefHeight="25.0" prefWidth="156.0" promptText="Nombres" />
+            <JFXTextField fx:id="campo_direccion" layoutX="688.0" layoutY="279.0" prefHeight="25.0" prefWidth="156.0" promptText="Direccion" />
+            <JFXTextField fx:id="campo_telefono" layoutX="688.0" layoutY="317.0" prefHeight="25.0" prefWidth="156.0" promptText="Telefono" />
+            <JFXTextField fx:id="campo_parentesco" layoutX="688.0" layoutY="355.0" prefHeight="25.0" prefWidth="156.0" promptText="Parentesco" />
+            <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="15.0" layoutX="688.0" layoutY="445.0" onAction="#INSERT" prefHeight="25.0" prefWidth="160.0" style="-fx-background-color: green;" text="Insertar Persona" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Imagenes/Campos/plus-circle.png" />
+                     </image>
+                  </ImageView>
+               </graphic></JFXButton>
+            <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="5.0" layoutX="688.0" layoutY="495.0" onAction="#UPDATE" prefHeight="25.0" prefWidth="160.0" style="-fx-background-color: yellow;" text="Actualizar Persona">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Imagenes/Campos/refresh-circle.png" />
+                     </image>
+                  </ImageView>
+               </graphic></JFXButton>
+            <JFXButton alignment="CENTER" contentDisplay="CENTER" ellipsisString="" layoutX="688.0" layoutY="554.0" onAction="#DELETE" prefHeight="37.0" prefWidth="35.0" style="-fx-background-color: red;" text="." textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Imagenes/Campos/delete.png" />
+                     </image>
+                  </ImageView>
+               </graphic></JFXButton>
+            <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="800.0" layoutY="552.0" onAction="#CLEAR" prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: white;" text=".">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Imagenes/Campos/close-circle.png" />
+                     </image>
+                  </ImageView>
+               </graphic></JFXButton>
+            <JFXTextField fx:id="campo_documento" layoutX="688.0" layoutY="204.0" prefHeight="25.0" prefWidth="156.0" promptText="Documento" />
+            <ImageView fitHeight="47.0" fitWidth="55.0" layoutX="832.0" layoutY="560.0" pickOnBounds="true" preserveRatio="true" />
+            <Pane layoutX="661.0" layoutY="33.0" prefHeight="100.0" prefWidth="210.0" style="-fx-background-color: white; -fx-background-radius: 6; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" AnchorPane.rightAnchor="29.0" AnchorPane.topAnchor="33.0">
+               <children>
+                  <JFXComboBox fx:id="campo_matricula" layoutX="8.0" layoutY="12.0" onAction="#verNombreMatricula" prefHeight="25.0" prefWidth="190.0" promptText="Numero Matricula" />
+                  <Text layoutX="9.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombres" />
+                  <Text layoutX="10.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Apellidos" />
+                  <Text fx:id="campo_nombre" layoutX="83.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombres" />
+                  <Text fx:id="campo_apellido" layoutX="83.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Apellidos" />
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

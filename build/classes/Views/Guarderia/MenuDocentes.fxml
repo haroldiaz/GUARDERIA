@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Views.Guarderia.MenuDocentesController">
+   <bottom>
+      <AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <children>
+            <Text layoutX="14.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registro Docentes" wrappingWidth="295.40821838378906">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Text>
+            <TableView fx:id="tabla" layoutX="10.0" layoutY="145.0" onMouseClicked="#ver" prefHeight="448.0" prefWidth="677.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="213.0">
+              <columns>
+                  <TableColumn fx:id="documento" prefWidth="111.66665649414062" text="Documento" />
+                <TableColumn fx:id="nombre" prefWidth="125.66666412353516" text="Nombre" />
+                <TableColumn fx:id="apellido" prefWidth="111.66665649414062" text="Apellido" />
+                  <TableColumn fx:id="telefono" prefWidth="111.66665649414062" text="Telefono" />
+                  <TableColumn fx:id="correo" prefWidth="111.66665649414062" text="Correo" />
+                  <TableColumn fx:id="estudios" prefWidth="70.0" text="Estudios" />
+                  <TableColumn fx:id="grados" prefWidth="101.0" text="Grado Asignado" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="718.0" layoutY="547.0" onAction="#DELETE" prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: red;" text="." textFill="WHITE">
+               <tooltip>
+                  <Tooltip text="Elminar Docente" />
+               </tooltip>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Imagenes/Campos/delete.png" />
+                     </image>
+                  </ImageView>
+               </graphic></JFXButton>
+            <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="14.0" layoutX="718.0" layoutY="501.0" onAction="#UPDATE" prefHeight="25.0" prefWidth="160.0" style="-fx-background-color: yellow;" text="Actualizar Datos">
+               <tooltip>
+                  <Tooltip text="Actulizar Datos Docente" />
+               </tooltip>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Imagenes/Campos/refresh-circle.png" />
+                     </image>
+                  </ImageView>
+               </graphic></JFXButton>
+            <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="RIGHT" ellipsisString="" graphicTextGap="10.0" layoutX="718.0" layoutY="456.0" onAction="#INSERT" prefHeight="30.0" prefWidth="160.0" style="-fx-background-color: green;" text="Agregar Docente" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Imagenes/Campos/plus-circle.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip text="Agregar Nuevo Docente" />
+               </tooltip></JFXButton>
+            <JFXTextField fx:id="campo_nombre" layoutX="720.0" layoutY="126.0" promptText="Nombre" />
+            <JFXTextField fx:id="campo_apellido" layoutX="722.0" layoutY="163.0" promptText="Apellido" />
+            <JFXTextField fx:id="campo_documento" layoutX="720.0" layoutY="90.0" promptText="Documento" />
+            <JFXTextField fx:id="campo_correo" layoutX="720.0" layoutY="335.0" promptText="Correo" />
+            <JFXTextField fx:id="campo_estudios" layoutX="720.0" layoutY="238.0" promptText="Estudios" />
+            <JFXTextField fx:id="campo_telefono" layoutX="720.0" layoutY="200.0" promptText="Telefono" />
+            <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="831.0" layoutY="547.0" onAction="#CLEAR" prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: WHITE;" text=".">
+               <tooltip>
+                  <Tooltip text="Limipiar Campos" />
+               </tooltip>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Imagenes/Campos/close-circle.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXComboBox fx:id="campo_grado" layoutX="720.0" layoutY="274.0" prefHeight="25.0" prefWidth="135.0" promptText="Grado" />
+            <JFXTextField fx:id="campo_contra" layoutX="720.0" layoutY="372.0" promptText="Contraseña" />
+            <JFXDatePicker fx:id="campo_fecha" layoutX="720.0" layoutY="409.0" prefHeight="25.0" prefWidth="135.0" promptText="Fecha Ingreso" />
+            <Text layoutX="720.0" layoutY="331.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuario">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text layoutX="720.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Datos Personales" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>

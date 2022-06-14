@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Views.PadreFamilia.PadreFamiliaMenuController">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <children>
+            <Text layoutX="84.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Padre de Familia">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Text>
+            <JFXButton buttonType="RAISED" ellipsisString="" focusTraversable="false" layoutX="765.0" layoutY="47.0" onAction="#cerrarSesion" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: WHITE;" AnchorPane.rightAnchor="44.0" AnchorPane.topAnchor="35.0">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Imagenes/Campos/login.png" />
+                     </image>
+                  </ImageView>
+               </graphic></JFXButton>
+            <HBox alignment="CENTER" layoutX="-1.0" layoutY="298.0" prefHeight="375.0" prefWidth="1080.0" spacing="25.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="300.0">
+               <children>
+                  <JFXButton fx:id="btn_notas" buttonType="RAISED" contentDisplay="TOP" focusTraversable="false" graphicTextGap="20.0" onAction="#consultarNotas" onMouseEntered="#cambiarColorNotas" onMouseExited="#btonNotas" prefHeight="140.0" prefWidth="120.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="Consultar Notas">
+                     <graphic>
+                        <ImageView fx:id="img_notas" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Imagenes/Padre/registro.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btn_config" buttonType="RAISED" contentDisplay="TOP" focusTraversable="false" graphicTextGap="10.0" onAction="#abrirConfig" onMouseEntered="#cambiarColorConfig" onMouseExited="#btonConfig" prefHeight="140.0" prefWidth="120.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="Usuario">
+                     <graphic>
+                        <ImageView fx:id="img_config" fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Imagenes/Campos/cuenta.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <Text fx:id="txt_nombre" layoutX="84.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

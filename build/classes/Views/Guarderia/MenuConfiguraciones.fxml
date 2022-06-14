@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Views.Guarderia.MenuConfiguracionesController">
+   <center>
+      <AnchorPane prefHeight="400.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text layoutX="171.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuario" textAlignment="CENTER" wrappingWidth="196.6875">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Text>
+            <JFXButton buttonType="RAISED" layoutX="430.0" layoutY="333.0" prefHeight="37.0" prefWidth="113.0" style="-fx-background-color: white;" text="Eliminar Cuenta" visible="false" />
+            <JFXButton buttonType="RAISED" layoutX="157.0" layoutY="333.0" prefHeight="37.0" prefWidth="113.0" style="-fx-background-color: white;" text="Editar Usuario" visible="false" />
+            <JFXButton buttonType="RAISED" layoutX="292.0" layoutY="333.0" prefHeight="37.0" prefWidth="113.0" style="-fx-background-color: white;" text="Guardar Cambios" visible="false" />
+            <JFXTextField fx:id="campo_nombre" editable="false" focusTraversable="false" layoutX="172.0" layoutY="163.0" prefHeight="25.0" prefWidth="200.0" promptText="Nombre Completo" />
+            <JFXTextField fx:id="campo_correo" editable="false" focusTraversable="false" layoutX="171.0" layoutY="222.0" prefHeight="25.0" prefWidth="200.0" promptText="Correo" />
+            <JFXTextField fx:id="campo_contra" editable="false" focusTraversable="false" layoutX="171.0" layoutY="279.0" prefHeight="25.0" prefWidth="200.0" promptText="Contraseña" />
+            <Text fx:id="campo_fecha" fill="#404040" layoutX="299.0" layoutY="335.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2019-12-01" />
+            <Text fill="#171717" layoutX="169.0" layoutY="336.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fecha de Ingreso" />
+            <Text layoutX="171.0" layoutY="156.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre" />
+            <Text layoutX="170.0" layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Correo" />
+            <Text layoutX="170.0" layoutY="273.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contraseña" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

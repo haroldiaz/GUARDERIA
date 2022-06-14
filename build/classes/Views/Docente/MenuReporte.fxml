@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Views.Docente.MenuReporteController">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text layoutX="43.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reporte de Estudiantes">
+               <font>
+                  <Font size="28.0" />
+               </font></Text>
+            <TableView fx:id="tabla" editable="true" layoutX="15.0" layoutY="146.0" prefHeight="441.0" prefWidth="853.0">
+               <columns>
+                  <TableColumn fx:id="numeroMatricula" minWidth="0.0" prefWidth="70.0" text="NumeroMatricula" />
+                  <TableColumn fx:id="nombres" minWidth="0.0" prefWidth="70.0" text="Nombre" />
+                  <TableColumn fx:id="apellido" minWidth="0.0" prefWidth="104.0" text="Apellidos" />
+                  <TableColumn fx:id="numeroRegistro" prefWidth="158.0" text="Numero Registro Civil" />
+                  <TableColumn fx:id="tipoSangre" prefWidth="113.0" text="Tipo Sangre" />
+                  <TableColumn fx:id="tipoSexo" prefWidth="113.0" text="sexo" />
+                  <TableColumn fx:id="fechaNacimiento" prefWidth="117.0" text="Fecha Nacimiento" />
+                  <TableColumn fx:id="fechaIngreso" prefWidth="153.0" text="Fecha Ingreso Guarderia" />
+                  <TableColumn fx:id="grado" minWidth="0.0" prefWidth="75.66668701171875" text="Grado" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

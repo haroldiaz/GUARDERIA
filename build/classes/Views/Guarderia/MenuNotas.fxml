@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Views.Guarderia.MenuNotasController">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="tabla" layoutX="14.0" layoutY="158.0" onMouseClicked="#ver" prefHeight="416.0" prefWidth="619.0" AnchorPane.bottomAnchor="26.0" AnchorPane.leftAnchor="14.0">
+              <columns>
+                  <TableColumn fx:id="matricula" editable="false" prefWidth="193.0" text="Matricula" />
+                <TableColumn fx:id="fecha" editable="false" prefWidth="118.66667175292969" sortable="false" text="Fecha" />
+                  <TableColumn fx:id="actividad" editable="false" prefWidth="163.0" text="Actividad" />
+                <TableColumn fx:id="descripcion" editable="false" prefWidth="193.0" text="Descripcion" />
+                  <TableColumn fx:id="calificacion" editable="false" prefWidth="193.0" text="Calificacion" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <JFXButton buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="14.0" layoutX="683.0" layoutY="452.0" onAction="#INSERT" prefHeight="30.0" prefWidth="160.0" style="-fx-background-color: green;" text="Agregar Nota" textFill="WHITE">
+               <tooltip>
+                  <Tooltip text="Agregar Una Nueva Nota" />
+               </tooltip>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Imagenes/Campos/plus-circle.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="10.0" layoutX="684.0" layoutY="496.0" onAction="#UPDATE" prefHeight="30.0" prefWidth="160.0" style="-fx-background-color: yellow;" text="Actualizar Nota">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Imagenes/Campos/refresh-circle.png" />
+                     </image>
+                  </ImageView>
+               </graphic></JFXButton>
+            <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" ellipsisString="" layoutX="682.0" layoutY="539.0" onAction="#DELETE" prefHeight="35.0" prefWidth="70.0" style="-fx-background-color: red;" text="." textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Imagenes/Campos/delete.png" />
+                     </image>
+                  </ImageView>
+               </graphic></JFXButton>
+            <JFXDatePicker fx:id="campo_fecha" layoutX="655.0" layoutY="180.0" prefHeight="25.0" prefWidth="190.0" promptText="Fecha" />
+            <JFXTextField fx:id="campo_actividad" layoutX="655.0" layoutY="218.0" prefHeight="25.0" prefWidth="190.0" promptText="Actividad" />
+            <JFXTextArea fx:id="campo_descripcion" layoutX="653.0" layoutY="303.0" prefHeight="138.0" prefWidth="200.0" promptText="Descripcion de la Nota" />
+            <Text layoutX="39.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NOTAS">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Text>
+            <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" ellipsisString="" layoutX="774.0" layoutY="539.0" onAction="#CLEAR" prefHeight="35.0" prefWidth="70.0" style="-fx-background-color: white;" text=".">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Imagenes/Campos/close-circle.png" />
+                     </image>
+                  </ImageView>
+               </graphic></JFXButton>
+            <JFXComboBox fx:id="campo_calificacion" layoutX="655.0" layoutY="256.0" prefHeight="25.0" prefWidth="190.0" promptText="Calificacion" />
+            <Pane layoutX="657.0" layoutY="31.0" prefHeight="100.0" prefWidth="210.0" style="-fx-background-color: white; -fx-background-radius: 6; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+               <children>
+                  <JFXComboBox fx:id="campo_matricula" layoutX="11.0" layoutY="7.0" onAction="#verNombreMatricula" prefHeight="25.0" prefWidth="190.0" promptText="Matricula" />
+                  <Text layoutX="12.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombres" />
+                  <Text layoutX="12.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Apellidos" />
+                  <Text fx:id="campo_nombre" layoutX="84.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre" />
+                  <Text fx:id="campo_apellido" layoutX="84.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Apellido" />
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
